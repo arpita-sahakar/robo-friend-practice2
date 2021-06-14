@@ -11,7 +11,7 @@ function DisplayRobots({ robots }) {
             <Card
               style={{
                 width: "18rem",
-                backgroundColor: `${i % 3 === 0 ? "orange" : "red"} `,
+                backgroundColor: `${i % 2 === 0 ? "orange" : "red"} `,
               }}
             >
               <Card.Img
