@@ -1,19 +1,29 @@
 import React from "react";
-import Pic from "./Pic";
 import { Card } from "react-bootstrap";
+import "../container/App.css"
 
 function DisplayRobots({ robots }) {
   return (
     <div>
-      {robots.map((el) => {
+      {robots.map((el, i) => {
         return (
-          <Card style={{ width: "18rem", backgroundColor: "orange" }}>
-            <Card.Img variant="top" src={`https://robohash.org/${el.id}/100px180` }/>
-            <Card.Body>
-              <Card.Title>{el.name}</Card.Title>
-              <Card.Text>{el.email}</Card.Text>
-            </Card.Body>
-          </Card>
+          <div className = "cardStyling">
+            <Card
+              style={{
+                width: "18rem",
+                backgroundColor: `${i % 3 === 0 ? "orange" : "red"} `,
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src={`https://robohash.org/${el.id}/100px180`}
+              />
+              <Card.Body>
+                <Card.Title>{el.name}</Card.Title>
+                <Card.Text>{el.email}</Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         );
       })}
     </div>

@@ -1,9 +1,12 @@
 import React from 'react'
 
-function SearBox() {
+function SearBox({setInputText}) {
+    const robotHandler = (e) =>{
+        setInputText(e.target.value);
+    }
     return (
         <div>
-            <input type="text" placeholder="search robots..."></input>
+            <input onChange={robotHandler} type="text" placeholder="search robots..."></input>
         </div>
     )
 }
