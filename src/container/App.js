@@ -36,6 +36,7 @@ function App() {
       <Header />
       <SearchBox setInputText={setInputText} />
       <DisplayRobots robots={filterRobotList(robots)} />
+     
     </div>
   );
 }
